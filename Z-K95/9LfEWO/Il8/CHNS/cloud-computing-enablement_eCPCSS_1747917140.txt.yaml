@@ -1,0 +1,26 @@
+# Configuration file for generating documentation via readthedocs.
+
+# Required
+version: 2
+
+formats: all
+
+mkdocs:
+    configuration: doc/mkdocs.yml
+
+build:
+    os: "ubuntu-20.04"
+    tools:
+      python: "3.9"
+    jobs:
+      pre_build:
+        - cd doc && git clone https://github.com/jothepro/doxygen-awesome-css.git --branch v2.1.0
+        - cp doc/api/cctools.doxygen.config doc/api/cctools.doxygen-mod.config
+        - echo "HTML_EXTRA_STYLESHEET = doxygen-awesome-css/doxygen-awesome.css" >> doc/api/cctools.doxygen-mod.config
+        - cd doc && doxygen api/cctools.doxygen-mod.config
+
+# Additional pip modules needed from doc/readthedocs.requirements.txt
+
+python:
+    install:
+    - requirements: doc/mkdocs.requirements.txt
