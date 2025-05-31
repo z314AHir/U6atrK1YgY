@@ -2,7 +2,6 @@
 BasedOnStyle: LLVM
 IndentWidth: 4
 ColumnLimit: 140
----
 Language: Cpp
 AccessModifierOffset: -4
 AlignAfterOpenBracket: DontAlign
