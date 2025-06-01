@@ -1,0 +1,16 @@
+.git
+.idea
+.vscode
+
+**/.env.sample
+**/codegen.ts
+**/.storybook
+**/node_modules
+**/npm-debug.*
+
+.dockerignore
+.gitignore
+.gitlab-ci.*
+docker-compose.*
+Dockerfile
+README.*
