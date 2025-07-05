@@ -1,0 +1,16 @@
+_build
+deps
+/node_modules
+/assets/node_modules
+/doc
+erl_crash.dump
+**/_build
+/db
+**/deps
+/*.ez
+/.deliver/releases/
+/.idea
+/*.iml
+/projectFilesBackup
+/projectFilesBackup1
+Dockerfile
